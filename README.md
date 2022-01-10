@@ -31,7 +31,9 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](https://i.imgur.com/UhPJ4vy.png)
+![](https://i.imgur.com/6F3tF1U.png)
+![](https://i.imgur.com/HMFwFZV.png)
 
 ### Links
 
@@ -49,26 +51,36 @@ Users should be able to:
 - [React](https://reactjs.org/) - JS library
 - [React-router-dom](https://v5.reactrouter.com/) - For Routing
 - [Tailwind](https://tailwindcss.com/) - For styles
+- [RestCountries](https://restcountries.com/) - For data
 
 ### What I learned
 
 ```html
-
+    - Use of select tag
 ```
 
 ```css
-
+    - Image formating
+    - Grid
+    - Flexbox
 ```
 
 ```js
+    - Config eslint
+    - JSON manipulation
+```
 
+```react
+    - Use svg as components
+    - Handle state in select tag
 ```
 
 ### Continued development
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [Tailwind Cheatsheet](https://nerdcave.com/tailwind-cheat-sheet) - This helps me to find more faster utility classes for my styles and improve productivity.
+- [Format Numbers](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) - This help to format a big number with decimals.
 
 ## Author
 
