@@ -1,11 +1,5 @@
-import { useState } from 'react'
+import { AppRouter } from "./routers/AppRouter";
 
-export const App = ()=> {
-  
-  return (
-    <div>
-        <h1 className='font-bold text-2xl'>Inicio del Proyecto</h1>
-    </div>
-  )
-}
-
+export const App = () => {
+  return <AppRouter />;
+};
