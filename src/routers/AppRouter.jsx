@@ -8,7 +8,6 @@ import {
 import { CountryScreen } from "../components/CountryScreen.jsx";
 import { HomeScreen } from "../components/HomeScreen.jsx";
 import { ThemeMode } from "../components/ThemeMode.jsx";
-
 export const AppRouter = () => {
 
   return (
