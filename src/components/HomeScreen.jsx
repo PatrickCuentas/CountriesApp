@@ -22,8 +22,8 @@ function HomeScreen() {
         {!loading &&
           countries.map(country => {
             return (
-              <Suspense fallback={<LoadingView />}>
-                <CountryCard key={country.name.common} {...country} />
+              <Suspense fallback={<LoadingView />} key={country.name.common}>
+                <CountryCard {...country} />
               </Suspense>
             )
           })}
