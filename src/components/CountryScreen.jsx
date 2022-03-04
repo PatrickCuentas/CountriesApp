@@ -1,20 +1,20 @@
-import { useHistory } from "react-router-dom";
-import { useParams } from "react-router-dom";
-import { endpoints } from "../data/endpoints";
-import { useFetch } from "../hooks/useFetch";
-import { LeftArrow } from "../icons/LeftArrow";
-import { CountryItem } from "./CountryItem";
+import { useHistory } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
+import { endpoints } from '../data/endpoints'
+import { useFetch } from '../hooks/useFetch'
+import { LeftArrow } from '../icons/LeftArrow'
+import { CountryItem } from './CountryItem'
 
-export const CountryScreen = () => {
-  const endpointName = endpoints.name;
-  const history = useHistory();
-  const { countryId } = useParams();
-  const [state] = useFetch(endpointName(countryId), []);
-  const { data, loading } = state;
-  const [countryData] = data;
+function CountryScreen() {
+  const endpointName = endpoints.name
+  const history = useHistory()
+  const { countryId } = useParams()
+  const [state] = useFetch(endpointName(countryId), [])
+  const { data, loading } = state
+  const [countryData] = data
   const handleReturn = () => {
-    history.goBack();
-  };
+    history.goBack()
+  }
 
   return (
     !loading && (
@@ -32,5 +32,7 @@ export const CountryScreen = () => {
         <CountryItem key={countryData.name.common} {...countryData} />
       </>
     )
-  );
-};
+  )
+}
+
+export default CountryScreen

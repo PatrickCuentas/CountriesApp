@@ -1,15 +1,18 @@
+import React from 'react'
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Redirect,
   Link,
-} from "react-router-dom";
-import { CountryScreen } from "../components/CountryScreen.jsx";
-import { HomeScreen } from "../components/HomeScreen.jsx";
-import { ThemeMode } from "../components/ThemeMode.jsx";
-export const AppRouter = () => {
+} from 'react-router-dom'
+import { Suspense, lazy } from 'react'
+import ThemeMode from '../components/ThemeMode.jsx'
+import HomeScreen from '../components/HomeScreen.jsx'
+import LoadingView from '../components/LoadingView.jsx'
+const CountryScreen = lazy(() => import('../components/CountryScreen.jsx'))
 
+export const AppRouter = () => {
   return (
     <Router>
       <div>
@@ -27,12 +30,14 @@ export const AppRouter = () => {
               <HomeScreen />
             </Route>
             <Route path="/:countryId">
-              <CountryScreen />
+              <Suspense fallback={<LoadingView />}>
+                <CountryScreen />
+              </Suspense>
             </Route>
             <Redirect to="/" />
           </Switch>
         </div>
       </div>
     </Router>
-  );
-};
+  )
+}
