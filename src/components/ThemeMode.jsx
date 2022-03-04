@@ -1,24 +1,24 @@
-import { useState, useEffect } from "react";
-import { DarkMode } from "../icons/DarkMode.jsx";
-import { LightMode } from "../icons/LightMode.jsx";
-const htmlNode = document.querySelector("html");
+import { useState, useEffect } from 'react'
+import { DarkMode } from '../icons/DarkMode.jsx'
+import { LightMode } from '../icons/LightMode.jsx'
+const htmlNode = document.querySelector('html')
 
-export const ThemeMode = () => {
-  const [darkMode, setDarkMode] = useState(false);
+function ThemeMode(){
+  const [darkMode, setDarkMode] = useState(false)
 
   const toogleMode = () => {
-    setDarkMode((prev) => !prev);
-  };
+    setDarkMode(prev => !prev)
+  }
 
   const checkMode = () => {
     darkMode
-      ? htmlNode.classList.add("dark")
-      : htmlNode.classList.remove("dark");
-  };
+      ? htmlNode.classList.add('dark')
+      : htmlNode.classList.remove('dark')
+  }
 
   useEffect(() => {
-    checkMode();
-  }, [darkMode]);
+    checkMode()
+  }, [darkMode])
 
   return (
     <div className="flex gap-2 items-center">
@@ -27,5 +27,7 @@ export const ThemeMode = () => {
       </button>
       <span className="text-xl font-semibold dark:text-white">Dark Mode</span>
     </div>
-  );
-};
+  )
+}
+
+export default ThemeMode
